@@ -10,7 +10,7 @@ describe('Controls', () => {
   it('should exist', () => {
     expect(Controls).toExist()
   })
-
+  
   describe('render', () => {
     it('should render pause when started', () => {
       var controls = TestUtils.renderIntoDocument(<Controls countdownStatus='started' />)
@@ -18,7 +18,6 @@ describe('Controls', () => {
       var $pauseButton = $el.find('button:contains(Pause)')
 
       expect($pauseButton.length).toBe(1)
-
     })
 
     it('should render start when paused', () => {
@@ -27,7 +26,6 @@ describe('Controls', () => {
       var $startButton = $el.find('button:contains(Start)')
 
       expect($startButton.length).toBe(1)
-
     })
   })
 })
